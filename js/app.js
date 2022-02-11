@@ -31,11 +31,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  let sum = a * b;
+  let string = (`The product of ${a} and ${b} is ${sum}.`);
+  console.log(`the value of A is ${a}`);
+  console.log(`the value of b is ${b}`);
+  console.log(`the value of sum is ${sum}`);
+  console.log(`the value of string is ${string}`);
+  return [sum, string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
