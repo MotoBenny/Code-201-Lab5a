@@ -33,15 +33,15 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let sum = a * b;
   let string = (`The product of ${a} and ${b} is ${sum}.`);
-  console.log(`the value of A is ${a}`);
-  console.log(`the value of b is ${b}`);
-  console.log(`the value of sum is ${sum}`);
-  console.log(`the value of string is ${string}`);
+  // console.log(`the value of A is ${a}`);
+  // console.log(`the value of b is ${b}`);
+  // console.log(`the value of sum is ${sum}`);
+  // console.log(`the value of string is ${string}`);
   return [sum, string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -58,11 +58,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sumAb = sum(a, b)[0];
+  let sumAbandC= sum(sumAb, c)[0];
+  let mult = multiply(a,b)[0];
+  let multProd = multiply(mult,c)[0];
+  let stringSum = (`${a} and ${b} and ${c} sum to ${sumAbandC}.`);
+  let stringMult = (`The product of ${a} and ${b} and ${c} is ${multProd}.`);
+  // console.log(stringSum);
+  // console.log(stringMult);
+  return [sumAbandC, multProd, stringSum, stringMult];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
