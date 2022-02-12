@@ -117,7 +117,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   let Arr3 = multArr[2];
   let prod1 = multiply(Arr1, Arr2)[0];
   let total = multiply(prod1, Arr3)[0];
-return [total, `The numbers ${Arr1},${Arr2},${Arr3} have a product of ${total}.`];
+  return [total, `The numbers ${Arr1},${Arr2},${Arr3} have a product of ${total}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
